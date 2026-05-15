@@ -1,0 +1,19 @@
+<?php
+require_once 'config/database.php';
+$db = (new Database())->getConnection();
+
+// Generamos la clave perfecta
+$pass = password_hash('admin123', PASSWORD_DEFAULT);
+
+// Limpiamos y creamos al admin
+$db->query("DELETE FROM usuarios WHERE usuario = 'admin'");
+$query = "INSERT INTO usuarios (nombres, apellidos, usuario, contraseña, rol, estado) 
+          VALUES ('Administrador', 'Principal', 'admin', '$pass', 'ADMINISTRADOR', 1)";
+
+if ($db->query($query)) {
+    echo "<h1>¡Éxito!</h1><p>Usuario: <b>admin</b> | Contraseña: <b>admin123</b></p>";
+    echo "<a href='views/login.php'>Ir al Login</a>";
+} else {
+    echo "Error al resetear la base de datos.";
+}
+?>

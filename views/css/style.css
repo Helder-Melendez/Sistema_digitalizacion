@@ -1,0 +1,204 @@
+/* --- Estilos Globales --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Fondo Oscuro Desenfocado y Elegante --- */
+.login-body {
+    /* Degradado oscuro base (pizarra/azul oscuro/gris) */
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #334155 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Luces sutiles en el fondo para dar contraste */
+.login-body::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(148, 163, 184, 0.08) 0%, transparent 60%);
+    z-index: 0;
+}
+
+.login-body::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    right: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(100, 116, 139, 0.08) 0%, transparent 60%);
+    z-index: 0;
+}
+
+/* --- Encabezado Principal (Fuera de la tarjeta) --- */
+.global-header {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 30px;
+}
+
+.brand-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #e2e8f0;
+}
+
+.global-title {
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: #f8fafc;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.global-subtitle {
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* --- Contenedor y Tarjeta Efecto Cristal --- */
+.login-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 380px;
+    padding: 0 20px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.75); /* Cristal opaco para buen contraste */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    padding: 35px 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.auth-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+.auth-subtitle {
+    font-size: 0.75rem;
+    color: #475569;
+    margin-bottom: 0;
+}
+
+/* --- Inputs Estilizados dentro del Cristal --- */
+.input-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #334155;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.glass-input-group {
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5); /* Semitransparente */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.glass-input-group:focus-within {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #94a3b8;
+    box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.2);
+}
+
+.glass-input-group .input-group-text {
+    background: transparent;
+    border: none;
+    color: #475569;
+    padding-left: 14px;
+    padding-right: 8px;
+}
+
+.glass-input-group .form-control,
+.glass-input-group .form-select {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: #0f172a;
+    font-size: 0.85rem;
+    padding: 12px 12px 12px 0;
+}
+
+.glass-input-group .form-control::placeholder {
+    color: #94a3b8;
+}
+
+/* --- Botón Pizarra Elegante --- */
+.btn-glass-login {
+    background: #1e293b;
+    color: #ffffff;
+    border: 1px solid #0f172a;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-glass-login:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* --- Alertas y Enlaces --- */
+.alert-custom {
+    font-size: 0.75rem;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(254, 226, 226, 0.8);
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+}
+
+.forgot-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+    color: #ffffff;
+}

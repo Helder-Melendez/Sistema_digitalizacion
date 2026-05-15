@@ -1,0 +1,116 @@
+/* --- Estilos Globales --- */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Fondo Degradado Colorido --- */
+.background-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Degradado lineal de azul a turquesa y verde suave */
+    background: linear-gradient(135deg, #4da3ff 0%, #30d5c8 50%, #90e060 100%);
+    /* Patrón sutil superpuesto para dar el efecto de red/tecnología */
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        linear-gradient(135deg, #4da3ff 0%, #30d5c8 50%, #90e060 100%);
+    padding: 20px;
+}
+
+/* --- Tarjeta Central Blanca --- */
+.login-card {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 45px 35px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    max-width: 420px;
+    width: 100%;
+}
+
+.login-card h2 {
+    color: #1a202c;
+    letter-spacing: -0.5px;
+}
+
+/* --- Estilo de los Inputs con Íconos Integrados --- */
+.custom-input-group {
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Mantiene los bordes redondeados */
+}
+
+/* Efecto al hacer clic en el input */
+.custom-input-group:focus-within {
+    border-color: #2ea043;
+    box-shadow: 0 0 0 4px rgba(46, 160, 67, 0.15);
+}
+
+.custom-input-group .input-group-text {
+    background-color: transparent;
+    border: none;
+    color: #9ca3af;
+    font-size: 1.2rem;
+    padding-left: 15px;
+}
+
+.custom-input-group .form-control,
+.custom-input-group .form-select {
+    border: none;
+    box-shadow: none;
+    padding: 14px 10px;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.custom-input-group .form-control::placeholder {
+    color: #9ca3af;
+}
+
+/* --- Botón Verde Brillante --- */
+.btn-login {
+    background: linear-gradient(135deg, #34d058 0%, #28a745 100%);
+    border: none;
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover, .btn-login:focus {
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.35);
+    color: white;
+}
+
+.btn-login:active {
+    transform: translateY(1px);
+}
+
+/* --- Enlace de "Olvidó su contraseña" --- */
+.forgot-link {
+    color: #2ea043;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+/* Fuerza la visualización en mayúsculas dentro de los inputs */
+.upper-input {
+    text-transform: uppercase;
+}
